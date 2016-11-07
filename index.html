@@ -44,8 +44,8 @@ svg {
            onclick="updateData()" />
 </div>  
     
-<script src="//d3js.org/d3.v3.min.js"></script>
-<script src="//d3js.org/topojson.v1.min.js"></script>
+<script src="d3.js"></script>
+<script src="topojson.js"></script>
 <script>
 var width = 960,
     height = 1100;
@@ -98,7 +98,7 @@ g.call(xAxis).append("text")
     .attr("y", -6)
     .text("Population per square mile");
 
-d3.json("nh.json", function(error, ca) {
+d3.json("ca.json", function(error, ca) {
   if (error) throw error;
 
   var tracts = topojson.feature(ca, ca.objects.tracts);
@@ -190,7 +190,7 @@ g.call(xAxis).append("text")
     .attr("y", -6)
     .text("Population per square mile");
 
-d3.json("nh.json", function(error, ca) {
+d3.json("ca.json", function(error, ca) {
   if (error) throw error;
 
   var tracts = topojson.feature(ca, ca.objects.tracts);
